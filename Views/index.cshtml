@@ -1,7 +1,14 @@
-<h1></h1>
-<form  action="/printout" method="post">
-  <label for="/printout"></label>
-  <input type="text" name="">
-  <br><br>
-  <button type="submit" name="button"></button>
+<h1>Find out the weekday of any date!</h1>
+<form action="/" method="post">
+<label for="input"></label>
+<input type="text" name="month">
+<input type="text" name="day">
+<input type="text" name="year">
+<br><br>
+<button type="submit">Click here to show the weekday</button>
 </form>
+
+@if (@Model != "")
+{
+  <p>The weekday of the date is: @Model</p>
+}

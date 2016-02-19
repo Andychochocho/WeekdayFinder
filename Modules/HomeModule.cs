@@ -9,7 +9,14 @@ namespace WeekdayFinders
   {
     public HomeModule()
     {
-    Get["/"] = _ => View["index.cshtml"];
+      Get["/"] = _ => {
+          string model = "";
+          return View["index.cshtml", model];
+        };
+        Post["/"] = _ =>
+        {
+          return View["index.cshtml", WeekDayFinder.FindWeekDay(Request.Form["month"], Request.Form["day"], Request.Form["year"])];
+        };
     }
   }
 }

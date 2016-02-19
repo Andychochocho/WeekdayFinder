@@ -50,5 +50,6 @@ namespace WeekDayFinderTest
       double day = 1;
       Assert.Equal("Wednesday", WeekDayFinder.FindWeekDay(month, day, year));
     }
+
   }
 }
